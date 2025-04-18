@@ -1,0 +1,42 @@
+
+print(" ---------------------")
+print(" |       A T M       |")
+print(" ---------------------")
+
+name=str(input("What is your name >")) 
+print("Wlcome", name, "!")
+pin=int(input("Enter your pin to continue >"))
+if pin != "2311":
+    print("Get lost")
+else:
+    pin = "2311"
+    balance = 10000
+
+choice = {
+    "Check balance",
+    "Deposit" ,
+    "Withdraw" ,
+}
+print("__________________")
+print("What do you want to do today !")
+while True:
+    for item in choice:
+        print(item)
+    choice_ = input(">>")
+    if choice_ == "Check balance":
+        print (balance)
+    elif choice_ == "Deposit":
+        amount=int(input("How much money you would like to deposit >> "))
+        balance_= balance+amount
+        print(balance_)
+    elif choice_ == "Withdraw":
+        amount=int(input("How much money you would like to withdraw >> "))
+        if balance < amount:
+            print ("You dont have enough money")
+        else :
+            balance_=balance-amount
+            print("Money successfully withdrawl , your balance is",balance_)
+    else:
+        ("Have a great day!")
+
+   
